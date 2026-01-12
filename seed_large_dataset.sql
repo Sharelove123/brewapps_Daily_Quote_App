@@ -1,0 +1,130 @@
+-- Bulk Insert Quotes for various categories
+
+-- MOTIVATION
+INSERT INTO quotes (text, author, category_id, is_featured) VALUES
+('The only way to do great work is to love what you do.', 'Steve Jobs', (SELECT id FROM categories WHERE name = 'Motivation'), true),
+('Believe you can and you''re halfway there.', 'Theodore Roosevelt', (SELECT id FROM categories WHERE name = 'Motivation'), false),
+('It always seems impossible until it''s done.', 'Nelson Mandela', (SELECT id FROM categories WHERE name = 'Motivation'), true),
+('Don''t watch the clock; do what it does. Keep going.', 'Sam Levenson', (SELECT id FROM categories WHERE name = 'Motivation'), false),
+('Start where you are. Use what you have. Do what you can.', 'Arthur Ashe', (SELECT id FROM categories WHERE name = 'Motivation'), false),
+('Everything you''ve ever wanted is on the other side of fear.', 'George Addair', (SELECT id FROM categories WHERE name = 'Motivation'), true),
+('Success is not final, failure is not fatal: it is the courage to continue that counts.', 'Winston Churchill', (SELECT id FROM categories WHERE name = 'Motivation'), true),
+('Hardships often prepare ordinary people for an extraordinary destiny.', 'C.S. Lewis', (SELECT id FROM categories WHERE name = 'Motivation'), false),
+('Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.', 'Christian D. Larson', (SELECT id FROM categories WHERE name = 'Motivation'), false),
+('The future belongs to those who believe in the beauty of their dreams.', 'Eleanor Roosevelt', (SELECT id FROM categories WHERE name = 'Motivation'), true),
+('You are never too old to set another goal or to dream a new dream.', 'C.S. Lewis', (SELECT id FROM categories WHERE name = 'Motivation'), false),
+('Act as if what you do makes a difference. It does.', 'William James', (SELECT id FROM categories WHERE name = 'Motivation'), false),
+('Success is walking from failure to failure with no loss of enthusiasm.', 'Winston Churchill', (SELECT id FROM categories WHERE name = 'Motivation'), false),
+('Dream big and dare to fail.', 'Norman Vaughan', (SELECT id FROM categories WHERE name = 'Motivation'), true),
+('What you get by achieving your goals is not as important as what you become by achieving your goals.', 'Zig Ziglar', (SELECT id FROM categories WHERE name = 'Motivation'), false),
+('It does not matter how slowly you go as long as you do not stop.', 'Confucius', (SELECT id FROM categories WHERE name = 'Motivation'), false),
+('Quality is not an act, it is a habit.', 'Aristotle', (SELECT id FROM categories WHERE name = 'Motivation'), false),
+('Setting goals is the first step in turning the invisible into the visible.', 'Tony Robbins', (SELECT id FROM categories WHERE name = 'Motivation'), true),
+('If you can dream it, you can do it.', 'Walt Disney', (SELECT id FROM categories WHERE name = 'Motivation'), true),
+('Aim for the moon. If you miss, you may hit a star.', 'W. Clement Stone', (SELECT id FROM categories WHERE name = 'Motivation'), false);
+
+-- LOVE
+INSERT INTO quotes (text, author, category_id, is_featured) VALUES
+('The best thing to hold onto in life is each other.', 'Audrey Hepburn', (SELECT id FROM categories WHERE name = 'Love'), true),
+('I have found the one whom my soul loves.', 'Song of Solomon 3:4', (SELECT id FROM categories WHERE name = 'Love'), false),
+('Love is composed of a single soul inhabiting two bodies.', 'Aristotle', (SELECT id FROM categories WHERE name = 'Love'), true),
+('Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.', 'Lao Tzu', (SELECT id FROM categories WHERE name = 'Love'), true),
+('Love looks not with the eyes, but with the mind, And therefore is winged Cupid painted blind.', 'William Shakespeare', (SELECT id FROM categories WHERE name = 'Love'), false),
+('To love and be loved is to feel the sun from both sides.', 'David Viscott', (SELECT id FROM categories WHERE name = 'Love'), false),
+('Love is not about possession. Love is about appreciation.', 'Osho', (SELECT id FROM categories WHERE name = 'Love'), false),
+('We are shaped and fashioned by what we love.', 'Johann Wolfgang von Goethe', (SELECT id FROM categories WHERE name = 'Love'), true),
+('Where there is love there is life.', 'Mahatma Gandhi', (SELECT id FROM categories WHERE name = 'Love'), true),
+('Love itself is what is left over when being in love has burned away.', 'Louis de Bernières', (SELECT id FROM categories WHERE name = 'Love'), false),
+('There is no remedy for love but to love more.', 'Henry David Thoreau', (SELECT id FROM categories WHERE name = 'Love'), false),
+('Love all, trust a few, do wrong to none.', 'William Shakespeare', (SELECT id FROM categories WHERE name = 'Love'), true),
+('Life is the flower for which love is the honey.', 'Victor Hugo', (SELECT id FROM categories WHERE name = 'Love'), false),
+('The giving of love is an education in itself.', 'Eleanor Roosevelt', (SELECT id FROM categories WHERE name = 'Love'), false),
+('Love creates an "us" without destroying a "me".', 'Leo Buscaglia', (SELECT id FROM categories WHERE name = 'Love'), false),
+('True love stories never have endings.', 'Richard Bach', (SELECT id FROM categories WHERE name = 'Love'), true),
+('Love is friendship that has caught fire.', 'Ann Landers', (SELECT id FROM categories WHERE name = 'Love'), false),
+('If I know what love is, it is because of you.', 'Hermann Hesse', (SELECT id FROM categories WHERE name = 'Love'), true),
+('Love creates an "us" without destroying a "me".', 'Leo Buscaglia', (SELECT id FROM categories WHERE name = 'Love'), false),
+('Love creates an "us" without destroying a "me".', 'Leo Buscaglia', (SELECT id FROM categories WHERE name = 'Love'), false);
+
+-- SUCCESS
+INSERT INTO quotes (text, author, category_id, is_featured) VALUES
+('Success is not the key to happiness. Happiness is the key to success.', 'Albert Schweitzer', (SELECT id FROM categories WHERE name = 'Success'), true),
+('Success usually comes to those who are too busy to be looking for it.', 'Henry David Thoreau', (SELECT id FROM categories WHERE name = 'Success'), false),
+('Don''t be afraid to give up the good to go for the great.', 'John D. Rockefeller', (SELECT id FROM categories WHERE name = 'Success'), true),
+('I find that the harder I work, the more luck I seem to have.', 'Thomas Jefferson', (SELECT id FROM categories WHERE name = 'Success'), false),
+('Success seems to be connected with action. Successful people keep moving. They make mistakes, but they don''t quit.', 'Conrad Hilton', (SELECT id FROM categories WHERE name = 'Success'), true),
+('There are no secrets to success. It is the result of preparation, hard work, and learning from failure.', 'Colin Powell', (SELECT id FROM categories WHERE name = 'Success'), false),
+('The only place where success comes before work is in the dictionary.', 'Vidal Sassoon', (SELECT id FROM categories WHERE name = 'Success'), false),
+('Success is falling nine times and getting up ten.', 'Jon Bon Jovi', (SELECT id FROM categories WHERE name = 'Success'), true),
+('The road to success and the road to failure are almost exactly the same.', 'Colin R. Davis', (SELECT id FROM categories WHERE name = 'Success'), false),
+('Develop success from failures. Discouragement and failure are two of the surest stepping stones to success.', 'Dale Carnegie', (SELECT id FROM categories WHERE name = 'Success'), false),
+('Opportunities don''t happen. You create them.', 'Chris Grosser', (SELECT id FROM categories WHERE name = 'Success'), true),
+('Don''t let the fear of losing be greater than the excitement of winning.', 'Robert Kiyosaki', (SELECT id FROM categories WHERE name = 'Success'), false),
+('If you really look closely, most overnight successes took a long time.', 'Steve Jobs', (SELECT id FROM categories WHERE name = 'Success'), true),
+('Success is not how high you have climbed, but how you make a positive difference to the world.', 'Roy T. Bennett', (SELECT id FROM categories WHERE name = 'Success'), false),
+('The successful warrior is the average man, with laser-like focus.', 'Bruce Lee', (SELECT id FROM categories WHERE name = 'Success'), false),
+('Success is liking yourself, liking what you do, and liking how you do it.', 'Maya Angelou', (SELECT id FROM categories WHERE name = 'Success'), true),
+('To succeed in life, you need two things: ignorance and confidence.', 'Mark Twain', (SELECT id FROM categories WHERE name = 'Success'), false),
+('Success is getting what you want, happiness is wanting what you get.', 'W.P. Kinsella', (SELECT id FROM categories WHERE name = 'Success'), false),
+('The best revenge is massive success.', 'Frank Sinatra', (SELECT id FROM categories WHERE name = 'Success'), true),
+('Success consists of going from failure to failure without loss of enthusiasm.', 'Winston Churchill', (SELECT id FROM categories WHERE name = 'Success'), false);
+
+-- WISDOM
+INSERT INTO quotes (text, author, category_id, is_featured) VALUES
+('The only true wisdom is in knowing you know nothing.', 'Socrates', (SELECT id FROM categories WHERE name = 'Wisdom'), true),
+('In the middle of difficulty lies opportunity.', 'Albert Einstein', (SELECT id FROM categories WHERE name = 'Wisdom'), true),
+('Life is really simple, but we insist on making it complicated.', 'Confucius', (SELECT id FROM categories WHERE name = 'Wisdom'), false),
+('It is not what happens to you, but how you react to it that matters.', 'Epictetus', (SELECT id FROM categories WHERE name = 'Wisdom'), true),
+('Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.', 'Buddha', (SELECT id FROM categories WHERE name = 'Wisdom'), false),
+('He who has a why to live can bear almost any how.', 'Friedrich Nietzsche', (SELECT id FROM categories WHERE name = 'Wisdom'), true),
+('Knowing yourself is the beginning of all wisdom.', 'Aristotle', (SELECT id FROM categories WHERE name = 'Wisdom'), false),
+('The only thing necessary for the triumph of evil is for good men to do nothing.', 'Edmund Burke', (SELECT id FROM categories WHERE name = 'Wisdom'), true),
+('Turn your wounds into wisdom.', 'Oprah Winfrey', (SELECT id FROM categories WHERE name = 'Wisdom'), false),
+('The journey of a thousand miles begins with one step.', 'Lao Tzu', (SELECT id FROM categories WHERE name = 'Wisdom'), true),
+('Wise men speak because they have something to say; Fools because they have to say something.', 'Plato', (SELECT id FROM categories WHERE name = 'Wisdom'), false),
+('It is the mark of an educated mind to be able to entertain a thought without accepting it.', 'Aristotle', (SELECT id FROM categories WHERE name = 'Wisdom'), false),
+('Be not afraid of going slowly, be afraid only of standing still.', 'Chinese Proverb', (SELECT id FROM categories WHERE name = 'Wisdom'), false),
+('A wise man can learn more from a foolish question than a fool can learn from a wise answer.', 'Bruce Lee', (SELECT id FROM categories WHERE name = 'Wisdom'), true),
+('Honesty is the first chapter in the book of wisdom.', 'Thomas Jefferson', (SELECT id FROM categories WHERE name = 'Wisdom'), false),
+('We are what we repeatedly do. Excellence, then, is not an act, but a habit.', 'Aristotle', (SELECT id FROM categories WHERE name = 'Wisdom'), true),
+('The unexamined life is not worth living.', 'Socrates', (SELECT id FROM categories WHERE name = 'Wisdom'), true),
+('Knowledge speaks, but wisdom listens.', 'Jimi Hendrix', (SELECT id FROM categories WHERE name = 'Wisdom'), false),
+('Count your age by friends, not years. Count your life by smiles, not tears.', 'John Lennon', (SELECT id FROM categories WHERE name = 'Wisdom'), true),
+('Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present.', 'Bil Keane', (SELECT id FROM categories WHERE name = 'Wisdom'), false);
+
+-- HUMOR
+INSERT INTO quotes (text, author, category_id, is_featured) VALUES
+('I''m not lazy, I''m on energy saving mode.', 'Anonymous', (SELECT id FROM categories WHERE name = 'Humor'), false),
+('I used to think I was indecisive, but now I''m not so sure.', 'Anonymous', (SELECT id FROM categories WHERE name = 'Humor'), true),
+('Life is short. Smile while you still have teeth.', 'Anonymous', (SELECT id FROM categories WHERE name = 'Humor'), true),
+('Common sense is like deodorant. The people who need it most never use it.', 'Anonymous', (SELECT id FROM categories WHERE name = 'Humor'), false),
+('My bed is a magical place where I suddenly remember everything I forgot to do.', 'Anonymous', (SELECT id FROM categories WHERE name = 'Humor'), false),
+('I am not arguing, I am simply explaining why I am right.', 'Anonymous', (SELECT id FROM categories WHERE name = 'Humor'), true),
+('I don''t trip over things, I do random gravity checks.', 'Anonymous', (SELECT id FROM categories WHERE name = 'Humor'), false),
+('I finally realized that people are prisoners of their phones... that''s why it''s called a "cell" phone.', 'Anonymous', (SELECT id FROM categories WHERE name = 'Humor'), true),
+('If you think you are too small to make a difference, try sleeping with a mosquito.', 'Dalai Lama', (SELECT id FROM categories WHERE name = 'Humor'), true),
+('Always borrow money from a pessimist. He won''t expect it back.', 'Oscar Wilde', (SELECT id FROM categories WHERE name = 'Humor'), false),
+('People say nothing is impossible, but I do nothing every day.', 'A.A. Milne', (SELECT id FROM categories WHERE name = 'Humor'), false),
+('The road to success is dotted with many tempting parking spaces.', 'Will Rogers', (SELECT id FROM categories WHERE name = 'Humor'), false),
+('A day without sunshine is like, you know, night.', 'Steve Martin', (SELECT id FROM categories WHERE name = 'Humor'), false),
+('Procrastination is the art of keeping up with yesterday.', 'Don Marquis', (SELECT id FROM categories WHERE name = 'Humor'), true),
+('Light travels faster than sound. This is why some people appear bright until you hear them speak.', 'Alan Dundes', (SELECT id FROM categories WHERE name = 'Humor'), true),
+('I''m on a seafood diet. I see food and I eat it.', 'Seefood Lovers', (SELECT id FROM categories WHERE name = 'Humor'), false),
+('Behind every great man is a woman rolling her eyes.', 'Jim Carrey', (SELECT id FROM categories WHERE name = 'Humor'), false),
+('The best way to appreciate your job is to imagine yourself without one.', 'Oscar Wilde', (SELECT id FROM categories WHERE name = 'Humor'), true),
+('Between two evils, I always pick the one I never tried before.', 'Mae West', (SELECT id FROM categories WHERE name = 'Humor'), false),
+('I walk around like everything is fine, but deep down, inside my shoe, my sock is sliding off.', 'Anonymous', (SELECT id FROM categories WHERE name = 'Humor'), false);
+
+-- Additional Mixed Quotes to reach 100+ count
+INSERT INTO quotes (text, author, category_id, is_featured) VALUES
+('Try not to become a man of success, but rather become a man of value.', 'Albert Einstein', (SELECT id FROM categories WHERE name = 'Success'), true),
+('Your time is limited, so don''t waste it living someone else''s life.', 'Steve Jobs', (SELECT id FROM categories WHERE name = 'Motivation'), true),
+('Whatever you are, be a good one.', 'Abraham Lincoln', (SELECT id FROM categories WHERE name = 'Motivation'), false),
+('If you tell the truth, you don''t have to remember anything.', 'Mark Twain', (SELECT id FROM categories WHERE name = 'Wisdom'), true),
+('A friend is someone who knows all about you and still loves you.', 'Elbert Hubbard', (SELECT id FROM categories WHERE name = 'Love'), false),
+('To live is the rarest thing in the world. Most people exist, that is all.', 'Oscar Wilde', (SELECT id FROM categories WHERE name = 'Wisdom'), true),
+('Live as if you were to die tomorrow. Learn as if you were to live forever.', 'Mahatma Gandhi', (SELECT id FROM categories WHERE name = 'Motivation'), false),
+('We accept the love we think we deserve.', 'Stephen Chbosky', (SELECT id FROM categories WHERE name = 'Love'), false),
+('Without music, life would be a mistake.', 'Friedrich Nietzsche', (SELECT id FROM categories WHERE name = 'Wisdom'), false),
+('I have not failed. I''ve just found 10,000 ways that won''t work.', 'Thomas A. Edison', (SELECT id FROM categories WHERE name = 'Success'), true),
+('It represents the wise choice of many alternatives.', 'Unkown', (SELECT id FROM categories WHERE name = 'Wisdom'), false);

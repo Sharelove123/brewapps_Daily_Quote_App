@@ -1,132 +1,79 @@
-# ✨ Daily Quote App
+# QuoteVault
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter">
-  <img src="https://img.shields.io/badge/Riverpod-0553B1?style=for-the-badge&logo=flutter&logoColor=white" alt="Riverpod">
-  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart">
-</p>
+QuoteVault is a beautiful, feature-rich Flutter application designed to inspire users with daily quotes, organized collections, and customizable sharing options. It features a modern, adaptive UI with dark/light mode support, user authentication, and cloud sync via Supabase.
 
-<p align="center">
-  <b>A gorgeous, glassmorphic Flutter app for daily inspiration</b><br>
-  <i>Built with AI-assisted development • Powered by ZenQuotes API</i>
-</p>
+## Features
 
----
+*   **Authentication**: Secure Sign Up, Login, and Password Reset (Supabase Auth).
+*   **Daily Inspiration**: "Quote of the Day" with notifications.
+*   **Browse & Discovery**: Search quotes by text or author, and browse by categories (Motivation, Love, Wisdom, etc.).
+*   **Collections**: Organize favorite quotes into custom collections.
+*   **Favorites**: Quickly save quotes to your favorites list.
+*   **Personalization**: 
+    *   Dark/Light/System theme modes.
+    *   Customizable accent colors.
+    *   Adjustable font sizes.
+    *   Multiple card styles (Modern, Minimal, Polaroid).
+*   **Sharing**: Create beautiful shareable quote cards for social media.
+*   **Widget**: Home screen widget for quick access to daily inspiration.
 
-## 🌟 Features
+## Tech Stack
 
-| Feature | Description |
-|---------|-------------|
-| 📜 **Random Quotes** | Fresh inspiration with every tap |
-| ❤️ **Favorites** | Save and revisit your best quotes |
-| 📤 **Share** | Spread positivity via any app |
-| 🎨 **Glassmorphism** | Modern, translucent UI design |
-| ⚡ **Instant Refresh** | Cache-busting ensures new quotes |
+*   **Framework**: Flutter (Dart)
+*   **State Management**: Riverpod
+*   **Backend**: Supabase (PostgreSQL, Auth, Storage)
+*   **Architecture**: MVVM / Clean Architecture-inspired separation of concerns.
 
----
-
-## 🎨 Design
-
-**Figma Prototype**: [View Design](https://snow-code-03854369.figma.site/)
-
-> Aesthetic highlights:
-> - 💜 Purple-to-Indigo gradient background
-> - 🪟 Frosted glass cards & buttons
-> - ✒️ Playfair Display for elegant quotes
-> - 🔤 Inter for crisp UI text
-
----
-
-## 🛠️ Tech Stack
-
-```
-Flutter          →  Cross-platform framework
-Riverpod         →  State management (StateNotifier)
-ZenQuotes API    →  Quote source
-SharedPreferences→  Local persistence
-Google Fonts     →  Typography (Playfair, Inter)
-```
-
----
-
-## 🚀 Quick Start
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/Sharelove123/brewapps_Daily_Quote_App.git
-cd brewapps_Daily_Quote_App
-
-# 2. Install dependencies
-flutter pub get
-
-# 3. Run the app
-flutter run
-```
-
----
-
-## 📂 Project Structure
+## Project Structure
 
 ```
 lib/
-├── main.dart                 # Entry point + ProviderScope
-├── models/
-│   └── quote.dart            # Quote data model
-├── providers/
-│   └── app_provider.dart     # Riverpod StateNotifier
-├── screens/
-│   ├── home_screen.dart      # Quote display + actions
-│   ├── favorites_screen.dart # Saved quotes list
-│   └── main_container.dart   # Navigation wrapper
-├── services/
-│   ├── quote_service.dart    # API integration
-│   └── storage_service.dart  # Local persistence
-├── utils/
-│   ├── app_theme.dart        # Colors, gradients, fonts
-│   └── constants.dart        # API URLs
-└── widgets/
-    └── glass_action_button.dart # Reusable glass button
+├── config/         # App configuration (Supabase, etc.)
+├── models/         # Data models (Quote, UserProfile, etc.)
+├── providers/      # Riverpod providers for state management
+├── screens/        # UI Screens (Auth, Home, Settings, etc.)
+├── services/       # Service layer (API calls, Storage, Auth)
+├── utils/          # Utilities, Constants, Theme
+├── widgets/        # Reusable UI components
+└── main.dart       # Entry point
 ```
 
----
+## Setup Instructions
 
-## 🤖 AI-Assisted Development
+### Prerequisites
+*   Flutter SDK (Latest Stable)
+*   Supabase Account
 
-This project was built using **Claude Code (Antigravity)** as a pair programmer.
+### Installation
 
-### Workflow
-1. 🔍 **Design Analysis** — Browser automation extracted Figma specs
-2. 📝 **Planning** — Detailed implementation plan before coding
-3. 🧱 **Modular Build** — Models → Services → Providers → UI
-4. 🐛 **Iterative Fixes** — AI identified and resolved issues
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/quotevault.git
+    cd quotevault
+    ```
 
-### Key Prompts Used
-```
-"Migrate this Provider app to Riverpod with StateNotifier"
-"Fix deprecated withOpacity() for Flutter 3.10+"
-"Create a glassmorphic button matching this Figma design"
-```
+2.  **Install dependencies:**
+    ```bash
+    flutter pub get
+    ```
 
-### Iterations
-- ✅ Refactored from Provider to Riverpod per user preference
-- ✅ Fixed missing `uiTextStyle` reference
-- ✅ Updated deprecated APIs (`withOpacity` → `withValues`)
-- ✅ Added cache-busting for reliable quote refreshes
+3.  **Configure Supabase:**
+    *   Create a new Supabase project.
+    *   Run the SQL scripts provided in `SUPABASE_SETUP.md` to set up tables and security policies.
+    *   (Optional) Run the content of `seed_large_dataset.sql` in the SQL Editor to populate the database with over 100 quotes.
+    *   Create a `.env` file in the root directory (copy from `.env.example`):
+        ```env
+        SUPABASE_URL=your_supabase_url
+        SUPABASE_ANON_KEY=your_supabase_anon_key
+        ```
 
----
+4.  **Run the app:**
+    ```bash
+    flutter run
+    ```
 
-## 📱 Screenshots
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-> *Coming soon — add device screenshots here*
-
----
-
-## 📄 License
-
-This project is for **demonstration purposes** only.
-
----
-
-<p align="center">
-  Made with ❤️ and AI
-</p>
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

@@ -1,60 +1,71 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import '../utils/app_theme.dart';
 
+/// Reusable glass action button with blur effect
 class GlassActionButton extends StatelessWidget {
   final IconData icon;
   final VoidCallback onPressed;
-  final bool isLarge;
   final bool isActive;
+  final bool isLarge;
   final bool isLoading;
 
   const GlassActionButton({
     super.key,
     required this.icon,
     required this.onPressed,
-    this.isLarge = false,
     this.isActive = false,
+    this.isLarge = false,
     this.isLoading = false,
   });
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(50),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-        child: Container(
-          width: isLarge ? 72 : 56,
-          height: isLarge ? 72 : 56,
-          decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.2),
-            shape: BoxShape.circle,
-            border: Border.all(
-              color: Colors.white.withValues(alpha: 0.3),
-              width: 1,
+    final size = isLarge ? 72.0 : 56.0;
+    final iconSize = isLarge ? 32.0 : 24.0;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
+    final bgColor = isActive
+        ? AppTheme.primaryPurple.withValues(alpha: 0.3)
+        : (isDark
+              ? Colors.white.withValues(alpha: 0.1)
+              : Colors.black.withValues(alpha: 0.05));
+
+    final borderColor = isActive
+        ? AppTheme.primaryPurple
+        : (isDark
+              ? Colors.white.withValues(alpha: 0.2)
+              : Colors.black.withValues(alpha: 0.1));
+
+    final iconColor = isActive
+        ? AppTheme.favorite
+        : (isDark ? Colors.white : AppTheme.textSecondaryLight);
+
+    return GestureDetector(
+      onTap: isLoading ? null : onPressed,
+      child: ClipOval(
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 200),
+            width: size,
+            height: size,
+            decoration: BoxDecoration(
+              color: bgColor,
+              shape: BoxShape.circle,
+              border: Border.all(color: borderColor, width: isActive ? 2 : 1),
             ),
-          ),
-          child: Material(
-            color: Colors.transparent,
-            child: InkWell(
-              onTap: isLoading ? null : onPressed,
-              customBorder: const CircleBorder(),
-              child: Center(
-                child: isLoading
-                    ? const SizedBox(
-                        width: 24,
-                        height: 24,
-                        child: CircularProgressIndicator(
-                          color: Colors.white,
-                          strokeWidth: 2,
-                        ),
-                      )
-                    : Icon(
-                        icon,
-                        color: isActive ? Colors.redAccent : Colors.white,
-                        size: isLarge ? 32 : 24,
+            child: Center(
+              child: isLoading
+                  ? SizedBox(
+                      width: iconSize,
+                      height: iconSize,
+                      child: const CircularProgressIndicator(
+                        color: Colors.white,
+                        strokeWidth: 2,
                       ),
-              ),
+                    )
+                  : Icon(icon, color: iconColor, size: iconSize),
             ),
           ),
         ),
