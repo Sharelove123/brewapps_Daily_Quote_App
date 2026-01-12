@@ -77,3 +77,18 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+> ![Screenshot_20260112_193004](https://github.com/user-attachments/assets/3e3a6921-fe43-47c4-ae7c-08f5c60abb8e)
+![Screenshot_20260112_193008](https://github.com/user-attachments/assets/f90d5395-ec55-4868-8f3c-b14ad0a5f1f8)
+
+---
+
+## 📄 License
+
+This project is for **demonstration purposes** only.
+
+---
+
+<p align="center">
+  Made with ❤️ and AI
+</p>
