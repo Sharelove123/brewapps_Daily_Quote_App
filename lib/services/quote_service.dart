@@ -6,7 +6,11 @@ import '../utils/constants.dart';
 class QuoteService {
   Future<Quote> fetchRandomQuote() async {
     try {
-      final response = await http.get(Uri.parse(AppConstants.apiUrl));
+      final response = await http.get(
+        Uri.parse(
+          '${AppConstants.apiUrl}?t=${DateTime.now().millisecondsSinceEpoch}',
+        ),
+      );
 
       if (response.statusCode == 200) {
         final List<dynamic> data = jsonDecode(response.body);

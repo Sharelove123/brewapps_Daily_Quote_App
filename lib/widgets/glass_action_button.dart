@@ -6,6 +6,7 @@ class GlassActionButton extends StatelessWidget {
   final VoidCallback onPressed;
   final bool isLarge;
   final bool isActive;
+  final bool isLoading;
 
   const GlassActionButton({
     super.key,
@@ -13,6 +14,7 @@ class GlassActionButton extends StatelessWidget {
     required this.onPressed,
     this.isLarge = false,
     this.isActive = false,
+    this.isLoading = false,
   });
 
   @override
@@ -35,14 +37,23 @@ class GlassActionButton extends StatelessWidget {
           child: Material(
             color: Colors.transparent,
             child: InkWell(
-              onTap: onPressed,
+              onTap: isLoading ? null : onPressed,
               customBorder: const CircleBorder(),
               child: Center(
-                child: Icon(
-                  icon,
-                  color: isActive ? Colors.redAccent : Colors.white,
-                  size: isLarge ? 32 : 24,
-                ),
+                child: isLoading
+                    ? const SizedBox(
+                        width: 24,
+                        height: 24,
+                        child: CircularProgressIndicator(
+                          color: Colors.white,
+                          strokeWidth: 2,
+                        ),
+                      )
+                    : Icon(
+                        icon,
+                        color: isActive ? Colors.redAccent : Colors.white,
+                        size: isLarge ? 32 : 24,
+                      ),
               ),
             ),
           ),

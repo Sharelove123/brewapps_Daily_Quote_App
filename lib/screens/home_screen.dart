@@ -97,6 +97,7 @@ class HomeScreen extends ConsumerWidget {
               ),
               GlassActionButton(
                 icon: Icons.refresh_rounded,
+                isLoading: quoteState.isLoading,
                 onPressed: () {
                   ref.read(quoteProvider.notifier).fetchNewQuote();
                 },
