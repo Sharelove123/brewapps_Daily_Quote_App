@@ -38,10 +38,10 @@ class _MainContainerState extends State<MainContainer> {
         filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
         child: Container(
           decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.1),
+            color: const Color(0xFFD6E4FF).withValues(alpha: 0.8),
             borderRadius: const BorderRadius.vertical(top: Radius.circular(30)),
             border: Border(
-              top: BorderSide(color: Colors.white.withValues(alpha: 0.2)),
+              top: BorderSide(color: Colors.white.withValues(alpha: 0.5)),
             ),
           ),
           child: Theme(
@@ -59,8 +59,11 @@ class _MainContainerState extends State<MainContainer> {
               showSelectedLabels: true,
               showUnselectedLabels: true,
               selectedItemColor: Colors.white,
-              unselectedItemColor: Colors.white54,
-              selectedLabelStyle: AppTheme.navigationLabelStyle,
+              unselectedItemColor: Colors.grey,
+              selectedLabelStyle: AppTheme.navigationLabelStyle.copyWith(
+                color: const Color(0xFFA855F7),
+                fontWeight: FontWeight.bold,
+              ),
               unselectedLabelStyle: AppTheme.navigationLabelStyle,
               items: [
                 BottomNavigationBarItem(
@@ -82,10 +85,10 @@ class _MainContainerState extends State<MainContainer> {
   Widget _buildIcon(IconData icon, int index) {
     final isSelected = _currentIndex == index;
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: isSelected
           ? BoxDecoration(
-              color: Colors.blue.withValues(alpha: 0.3),
+              color: const Color(0xFFA855F7),
               borderRadius: BorderRadius.circular(20),
             )
           : null,

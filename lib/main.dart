@@ -12,7 +12,7 @@ void main() {
       statusBarColor: Colors.transparent,
       statusBarIconBrightness: Brightness.light,
       systemNavigationBarColor: Colors.transparent, // For Android 10+
-      systemNavigationBarIconBrightness: Brightness.light,
+      systemNavigationBarIconBrightness: Brightness.dark,
     ),
   );
   runApp(const ProviderScope(child: MyApp()));
