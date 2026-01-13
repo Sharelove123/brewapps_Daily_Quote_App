@@ -100,6 +100,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ![Screenshot_20260113_130411](https://github.com/user-attachments/assets/2009f3d7-96d4-4058-992a-7f30a015956f)
 ![Screenshot_20260113_130421](https://github.com/user-attachments/assets/bb9110c2-060d-4564-9bab-17dc7c016449)
 ![Screenshot_20260113_130427](https://github.com/user-attachments/assets/f0c2fc05-1eb5-454c-8b33-1601032c9e33)
+![Screenshot_20260113_131154](https://github.com/user-attachments/assets/1197f13b-feba-4ef7-a48e-0c9cabcb56b6)
 
 
 ---
