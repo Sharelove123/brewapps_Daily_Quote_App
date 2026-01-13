@@ -48,8 +48,8 @@ lib/
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/quotevault.git
-    cd quotevault
+    git clone https://github.com/Sharelove123/brewapps_Daily_Quote_App.git
+    cd brewapps_Daily_Quote_App
     ```
 
 2.  **Install dependencies:**
