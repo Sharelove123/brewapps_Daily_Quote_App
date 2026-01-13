@@ -105,29 +105,41 @@ class FavoritesScreen extends ConsumerWidget {
                     color: AppTheme.primaryPurple,
                   ),
                 )
-              : favoritesState.favorites.isEmpty
-              ? _buildEmptyState(isDark)
               : RefreshIndicator(
                   onRefresh: () =>
                       ref.read(favoritesProvider.notifier).refresh(),
                   color: AppTheme.primaryPurple,
-                  child: ListView.builder(
-                    physics: const AlwaysScrollableScrollPhysics(),
-                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 100),
-                    itemCount: favoritesState.favorites.length,
-                    itemBuilder: (context, index) {
-                      final quote = favoritesState.favorites[index];
-                      return _FavoriteCard(
-                        quote: quote,
-                        isDark: isDark,
-                        onRemove: () {
-                          ref
-                              .read(favoritesProvider.notifier)
-                              .removeFavorite(quote);
-                        },
-                      );
-                    },
-                  ),
+                  child: favoritesState.favorites.isEmpty
+                      ? LayoutBuilder(
+                          builder: (context, constraints) {
+                            return SingleChildScrollView(
+                              physics: const AlwaysScrollableScrollPhysics(),
+                              child: ConstrainedBox(
+                                constraints: BoxConstraints(
+                                  minHeight: constraints.maxHeight,
+                                ),
+                                child: _buildEmptyState(isDark),
+                              ),
+                            );
+                          },
+                        )
+                      : ListView.builder(
+                          physics: const AlwaysScrollableScrollPhysics(),
+                          padding: const EdgeInsets.fromLTRB(20, 0, 20, 100),
+                          itemCount: favoritesState.favorites.length,
+                          itemBuilder: (context, index) {
+                            final quote = favoritesState.favorites[index];
+                            return _FavoriteCard(
+                              quote: quote,
+                              isDark: isDark,
+                              onRemove: () {
+                                ref
+                                    .read(favoritesProvider.notifier)
+                                    .removeFavorite(quote);
+                              },
+                            );
+                          },
+                        ),
                 ),
         ),
       ],

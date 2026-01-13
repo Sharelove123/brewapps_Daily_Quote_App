@@ -107,7 +107,10 @@ class QuotesNotifier extends StateNotifier<QuotesState> {
     state = state.copyWith(favoriteIds: ids);
   }
 
-  Future<void> _loadQuotes({bool refresh = false}) async {
+  Future<void> _loadQuotes({
+    bool refresh = false,
+    bool randomize = false,
+  }) async {
     if (refresh) {
       state = state.copyWith(
         currentPage: 0,
@@ -120,6 +123,7 @@ class QuotesNotifier extends StateNotifier<QuotesState> {
     final quotes = await _quoteService.fetchQuotes(
       page: state.currentPage,
       categoryId: state.selectedCategoryId,
+      randomize: randomize,
     );
 
     state = state.copyWith(
@@ -130,10 +134,20 @@ class QuotesNotifier extends StateNotifier<QuotesState> {
     );
   }
 
-  /// Refresh all data
+  /// Refresh all data with randomized quotes
   Future<void> refresh() async {
     state = state.copyWith(isLoading: true, error: null);
-    await _initialize();
+    try {
+      await Future.wait([
+        _loadQuoteOfTheDay(),
+        _loadCategories(),
+        _loadFavoriteIds(),
+      ]);
+      // Load quotes with randomization for variety on refresh
+      await _loadQuotes(refresh: true, randomize: true);
+    } catch (e) {
+      state = state.copyWith(error: e.toString(), isLoading: false);
+    }
   }
 
   /// Load more quotes (pagination)

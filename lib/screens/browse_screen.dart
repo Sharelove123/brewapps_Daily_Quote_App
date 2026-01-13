@@ -130,14 +130,27 @@ class _BrowseScreenState extends ConsumerState<BrowseScreen> {
                     ),
                   )
                 : quotes.isEmpty
-                ? Center(
-                    child: Text(
-                      'No quotes found',
-                      style: AppTheme.emptyStateTextStyle,
-                    ),
+                ? LayoutBuilder(
+                    builder: (context, constraints) {
+                      return SingleChildScrollView(
+                        physics: const AlwaysScrollableScrollPhysics(),
+                        child: ConstrainedBox(
+                          constraints: BoxConstraints(
+                            minHeight: constraints.maxHeight,
+                          ),
+                          child: Center(
+                            child: Text(
+                              'No quotes found',
+                              style: AppTheme.emptyStateTextStyle,
+                            ),
+                          ),
+                        ),
+                      );
+                    },
                   )
                 : ListView.builder(
                     controller: _scrollController,
+                    physics: const AlwaysScrollableScrollPhysics(),
                     padding: const EdgeInsets.fromLTRB(20, 0, 20, 100),
                     itemCount:
                         quotes.length + (quotesState.isLoadingMore ? 1 : 0),

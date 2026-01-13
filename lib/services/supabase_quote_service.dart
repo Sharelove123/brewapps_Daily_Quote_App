@@ -14,6 +14,7 @@ class SupabaseQuoteService {
     String? categoryId,
     String? searchQuery,
     String? author,
+    bool randomize = false,
   }) async {
     var query = _client
         .from(SupabaseTables.quotes)
@@ -38,7 +39,16 @@ class SupabaseQuoteService {
         .order('created_at', ascending: false)
         .range(page * limit, (page + 1) * limit - 1);
 
-    return (response as List).map((json) => Quote.fromJson(json)).toList();
+    var quotes = (response as List)
+        .map((json) => Quote.fromJson(json))
+        .toList();
+
+    // Shuffle for randomization on refresh
+    if (randomize) {
+      quotes.shuffle();
+    }
+
+    return quotes;
   }
 
   /// Fetch a single quote by ID
