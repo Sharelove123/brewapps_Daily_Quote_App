@@ -78,8 +78,29 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
 
-> ![Screenshot_20260112_193004](https://github.com/user-attachments/assets/3e3a6921-fe43-47c4-ae7c-08f5c60abb8e)
-![Screenshot_20260112_193008](https://github.com/user-attachments/assets/f90d5395-ec55-4868-8f3c-b14ad0a5f1f8)
+> ![Screenshot_20260113_125951](https://github.com/user-attachments/assets/7423604a-01de-41b1-8ff1-e19e0d74a41e)
+![Screenshot_20260113_125954](https://github.com/user-attachments/assets/e753cd69-cd25-44f5-a1bb-20a2190d18ca)
+![Screenshot_20260113_125958](https://github.com/user-attachments/assets/45429ab4-3ddd-45f3-b58e-880c5b184e04)
+![Screenshot_20260113_130031](https://github.com/user-attachments/assets/b3d78b2a-06cd-475b-821f-791892cb70d9)
+![Screenshot_20260113_130034](https://github.com/user-attachments/assets/216a4734-5fda-4761-ac4f-b9eca4f4f235)
+![Screenshot_20260113_130038](https://github.com/user-attachments/assets/b71cb450-dbf2-46bc-a344-bc43e769f7b3)
+![Screenshot_20260113_130047](https://github.com/user-attachments/assets/b975be73-2edf-47cb-8a6f-064177fe5a5d)
+![Screenshot_20260113_130303](https://github.com/user-attachments/assets/b812f991-7578-44e5-befb-9e41e6ca3b56)
+![Screenshot_20260113_130306](https://github.com/user-attachments/assets/a46d76c0-684d-425a-b953-555b5f9e5fd3)
+![Screenshot_20260113_130309](https://github.com/user-attachments/assets/a7846833-5faf-4eea-87cd-27860ec5046d)
+![Screenshot_20260113_130326](https://github.com/user-attachments/assets/902f82f2-9c01-4a13-943e-e1d5050a75e6)
+![Screenshot_20260113_130330](https://github.com/user-attachments/assets/e91f11ac-f279-4196-b966-6f212b8defb0)
+![Screenshot_20260113_130334](https://github.com/user-attachments/assets/8aec81ca-9bcb-4196-aa1f-fd814e2f3f40)
+![Screenshot_20260113_130337](https://github.com/user-attachments/assets/b831edc0-9526-44e7-8da4-0b6ca365093b)
+![Screenshot_20260113_130340](https://github.com/user-attachments/assets/6d4d1fd1-8009-4e47-9b8e-f2c73f8b2d22)
+![Screenshot_20260113_130344](https://github.com/user-attachments/assets/956c6fc3-7829-4f7e-932b-2206c38fb936)
+![Screenshot_20260113_130351](https://github.com/user-attachments/assets/379ab6a3-8f63-4235-baf8-2b4e2f548241)
+![Screenshot_20260113_130359](https://github.com/user-attachments/assets/7fac4cf2-1bf1-44c3-bef9-f1bb26ed2ac0)
+![Screenshot_20260113_130404](https://github.com/user-attachments/assets/ec025ad0-0ab0-42d3-91fa-48081ca59195)
+![Screenshot_20260113_130411](https://github.com/user-attachments/assets/2009f3d7-96d4-4058-992a-7f30a015956f)
+![Screenshot_20260113_130421](https://github.com/user-attachments/assets/bb9110c2-060d-4564-9bab-17dc7c016449)
+![Screenshot_20260113_130427](https://github.com/user-attachments/assets/f0c2fc05-1eb5-454c-8b33-1601032c9e33)
+
 
 ---
 
